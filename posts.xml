@@ -66,7 +66,7 @@
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><em>There is always a lot of discussion about DC Council’s biennial post-election reshuffle, but it often isn’t easy to figure out exactly what changed. It’s also often just generally obnoxious to try to figure out what committee a given agency is under. So, for the last couple Council Periods, I’ve been trying to solve both problems at once: A table of DC agencies (there are over 250 of them! 😳) and which Committee of Council has oversight, now and in the recent past.</em></p>
+<p>_*<em>There is always a lot of discussion about DC Council’s biennial post-election reshuffle, but it often isn’t easy to figure out exactly what changed. It’s also often just generally obnoxious to try to figure out what committee a given agency is under. So, for the last couple Council Periods, I’ve been trying to solve both problems at once: A table of DC agencies (there are over 250 of them! 😳) and which Committee of Council has oversight, now and in the recent past. For who’s on which committee—which <strong>also</strong> changes every two years—see <a href="dc-council-2023.html">the companion post</a>.</em></p>
 </div>
 </div>
 </div>
@@ -2080,7 +2080,6 @@ Street Safety Cuts.”</span> April 4, 2023. <a href="http://swiderskiji.github.
   <category>DC</category>
   <category>DC Council</category>
   <category>DDOT</category>
-  <category>for dave</category>
   <category>I write letters</category>
   <category>Vision Zero</category>
   <category>WABA</category>
@@ -2102,7 +2101,8 @@ ins {
 }
 </style>
 <p>Every two years DC Council members move to new comittees as former members depart and new folks come in. By Council Rule—or the Chairman’s fiat—new members don’t get to chair a committee in their first half-term, but everyone else does. Conveniently, in 2023 as in 2021 we have just two new members, so the number of Committees stays at 10. (Everybody’s a member of the Committee of the Whole, which is chaired by the Chairman.)</p>
-<p>It’s hard to keep track of who’s on which committee, so here’s my second biennial attempt to sort things out. For what agency is under which committee—which <strong>also</strong> changes every two years—see <a href="dc-council-committees-2023.html">the companion post</a>.</p>
+<p>It’s hard to keep track of who’s on which committee, so here’s my attempt to sort things out. For what agency is under which committee—which <strong>also</strong> changes every two years—see <a href="dc-council-committees-2023.html">the companion post</a>.</p>
+<p>Committee members who dropped in the next Council Period—either because they left Council, or just moved to another Committee—are <del>marked thusly</del>, while new members will <ins>appear like this</ins>.</p>
 <!-- ::: callout-note -->
 
 <!-- *(Having some difficulties with the formatting of this table, which after three council periods has gotten a bit unwieldy and seems to be causing quarto some heartburn, so I apologize for any awkward bits of code that may be sticking out like a t-shirt tag....)* -->
