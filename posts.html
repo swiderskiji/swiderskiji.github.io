@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>J. Swiderski - Posts</title>
+<title>Posts – J. Swiderski</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -46,7 +46,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -55,8 +61,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -89,74 +97,101 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="J. Swiderski" href="posts.xml"><meta property="og:title" content="J. Swiderski - Posts">
-<meta property="og:site-name" content="J. Swiderski">
+<link rel="alternate" type="application/rss+xml" title="J. Swiderski" href="posts.xml" data-external="1"><meta property="og:title" content="Posts – J. Swiderski">
+<meta property="og:site_name" content="J. Swiderski">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">J. Swiderski</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About Me |</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About Me |</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./priorities.html" rel="" target="">
- <span class="menu-text">ANC Priorities |</span></a>
+    <a class="nav-link" href="./priorities.html"> 
+<span class="menu-text">ANC Priorities |</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" rel="" target="" aria-current="page">
- <span class="menu-text">Posts</span></a>
+    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+<span class="menu-text">Posts</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/swiderskiji" rel="" target=""><i class="bi bi-twitter" role="img" aria-label="twitter">
+    <a class="nav-link" href="https://twitter.com/swiderskiji"> <i class="bi bi-twitter" role="img" aria-label="twitter">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://bsky.app/profile/swiderski.bsky.social" rel="" target=""><i class="bi bi-cloud-fill" role="img" aria-label="BlueSky">
+    <a class="nav-link" href="https://bsky.app/profile/swiderski.bsky.social"> <i class="bi bi-cloud-fill" role="img" aria-label="BlueSky">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://transportation.social/@swiderski" rel="" target=""><i class="bi bi-mastodon" role="img" aria-label="mastodon">
+    <a class="nav-link" href="https://transportation.social/@swiderski"> <i class="bi bi-mastodon" role="img" aria-label="mastodon">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/erskiji" rel="" target=""><i class="bi bi-linkedin" role="img" aria-label="linkedin">
+    <a class="nav-link" href="https://www.linkedin.com/in/erskiji"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -169,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page">
 
       
     
@@ -191,18 +226,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ANC,Transit,Bikes,Housing" data-listing-date-sort="1721534400000" data-listing-file-modified-sort="1722196909000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="0" data-categories="ANC,Transit,Bikes,Housing" data-listing-date-sort="1721534400000" data-listing-file-modified-sort="1722196909444" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="716">
 <div class="body">
-<a href="./posts/priorities-longer.html">
 <h3 class="no-anchor listing-title">
-<em>More bikes, more homes, more transit, for all!</em>
+<a href="./posts/priorities-longer.html" class="no-external"><em>More bikes, more homes, more transit, for all!</em></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/priorities-longer.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('ANC'); return false;">
 ANC
@@ -217,14 +251,12 @@ Bikes
 Housing
 </div>
 </div>
-<a href="./posts/priorities-longer.html">
 <div class="listing-description">
-In 2023, I joined <em>Greater Greater Washington</em>’s contingent in the DC Pride march. I unexpectedly ended up getting to carry the banner — marching alongside the rep for the Washington Area Bicyclist…<em></em><strong></strong><strong></strong><strong></strong><strong></strong>
+<a href="./posts/priorities-longer.html" class="no-external">In 2023, I joined <em>Greater Greater Washington</em>’s contingent in the DC Pride march. I unexpectedly ended up getting to carry the banner — marching alongside the rep for the…<em></em><strong></strong><strong></strong><strong></strong><strong></strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/priorities-longer.html">
+<a href="./posts/priorities-longer.html" class="no-external">
 <div class="listing-date">
 Jul 21, 2024
 </div>
@@ -237,22 +269,20 @@ J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1698552000000" data-listing-file-modified-sort="1722620812865" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="463">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1698552000000" data-listing-file-modified-sort="1722620812000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="463" data-listing-word-count-sort="92594">
 <div class="body">
-<a href="./posts/dc-council-committees-2023.html">
 <h3 class="no-anchor listing-title">
-DC Executive Agencies and the Council Committees that oversee them
+<a href="./posts/dc-council-committees-2023.html" class="no-external">DC Executive Agencies and the Council Committees that oversee them</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/dc-council-committees-2023.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<p>It can be hard to figure out which Committee oversees a given agency. Maybe this’ll help.</p>
+<a href="./posts/dc-council-committees-2023.html" class="no-external">It can be hard to figure out which Committee oversees a given agency. Maybe this’ll help.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/dc-council-committees-2023.html">
+<a href="./posts/dc-council-committees-2023.html" class="no-external">
 <div class="listing-date">
 Oct 29, 2023
 </div>
@@ -265,27 +295,25 @@ J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1698292800000" data-listing-file-modified-sort="1721713655000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1698292800000" data-listing-file-modified-sort="1721713655111" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="965">
 <div class="body">
-<a href="./posts/2023-10-26-PAC-testimony.html">
 <h3 class="no-anchor listing-title">
-Testimony of the DC Pedestrian Advisory Council to DC Council, October 26, 2023
+<a href="./posts/2023-10-26-PAC-testimony.html" class="no-external">Testimony of the DC Pedestrian Advisory Council to DC Council, October 26, 2023</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-10-26-PAC-testimony.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Testimony given at the Public Hearing on B25-0296, the Prioritizing People in Planning Amendment Act of 2023, and B25-0283, the Trick-or-Streets Amendment Act of 2023, as prepared for delivery. Text submitted to the record is available online from…
+<a href="./posts/2023-10-26-PAC-testimony.html" class="no-external">Testimony given at the Public Hearing on B25-0296, the Prioritizing People in Planning Amendment Act of 2023, and B25-0283, the Trick-or-Streets Amendment Act of 2023, as…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-10-26-PAC-testimony.html">
+<a href="./posts/2023-10-26-PAC-testimony.html" class="no-external">
 <div class="listing-date">
 Oct 26, 2023
 </div>
 <div class="listing-author">
-J. I. Swiderski, J. I. Swiderski
+J. I. Swiderski
 </div>
 <div class="listing-reading-time">
 5 min
@@ -293,16 +321,14 @@ J. I. Swiderski, J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Advocacy,bikes,DC,Letters,transit,walking,\#bikeDC,\#walkDC,bike lanes,DC,DC Council,DDOT,I write letters,Vision Zero,WABA" data-listing-date-sort="1680580800000" data-listing-file-modified-sort="1722620521448" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="3" data-categories="Advocacy,bikes,DC,Letters,transit,walking,\#bikeDC,\#walkDC,bike lanes,DC,DC Council,DDOT,I write letters,Vision Zero,WABA" data-listing-date-sort="1680580800000" data-listing-file-modified-sort="1722620521000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="419">
 <div class="body">
-<a href="./posts/reject-the-mayors-street-safety-cuts.html">
 <h3 class="no-anchor listing-title">
-To DC Council: Please reject the Mayor’s street safety cuts
+<a href="./posts/reject-the-mayors-street-safety-cuts.html" class="no-external">To DC Council: Please reject the Mayor’s street safety cuts</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/reject-the-mayors-street-safety-cuts.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Advocacy'); return false;">
 Advocacy
@@ -350,14 +376,12 @@ Vision Zero
 WABA
 </div>
 </div>
-<a href="./posts/reject-the-mayors-street-safety-cuts.html">
 <div class="listing-description">
-Last month, the Office of the DC Auditor reported that, as DCist headlined it, Vision Zero Doesn’t Have Enough Funding, Staffing To Succeed. ’“The Bowser Administration failed to follow the ambitious announcement in 2015 with appropriate resources in both funding and manpower,” DC’s…
+<a href="./posts/reject-the-mayors-street-safety-cuts.html" class="no-external">Last month, the Office of the DC Auditor reported that, as DCist headlined it, Vision Zero Doesn’t Have Enough Funding, Staffing To Succeed. ’“The Bowser Administration…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/reject-the-mayors-street-safety-cuts.html">
+<a href="./posts/reject-the-mayors-street-safety-cuts.html" class="no-external">
 <div class="listing-date">
 Apr 4, 2023
 </div>
@@ -370,29 +394,25 @@ J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="DC Council" data-listing-date-sort="1671944400000" data-listing-file-modified-sort="1722620722746" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="4" data-categories="DC Council" data-listing-date-sort="1671944400000" data-listing-file-modified-sort="1722620722000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="990">
 <div class="body">
-<a href="./posts/dc-council-2023.html">
 <h3 class="no-anchor listing-title">
-DC Council committees&nbsp;comparison, 2023 edition
+<a href="./posts/dc-council-2023.html" class="no-external">DC Council committees&nbsp;comparison, 2023 edition</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/dc-council-2023.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('DC Council'); return false;">
 DC Council
 </div>
 </div>
-<a href="./posts/dc-council-2023.html">
 <div class="listing-description">
-<p>It’s time for Council’s biennial post-election shuffle. Who ended up where?</p>
+<a href="./posts/dc-council-2023.html" class="no-external">It’s time for Council’s biennial post-election shuffle. Who ended up where?</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/dc-council-2023.html">
+<a href="./posts/dc-council-2023.html" class="no-external">
 <div class="listing-date">
 Dec 25, 2022
 </div>
@@ -405,16 +425,14 @@ J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Advocacy,bikes,DC,Public comment,walking,\#bikeDC,\#walkDC,car culture,Congress,covid-19,DC,I write letters,National Park Service,Rock Creek Park" data-listing-date-sort="1660190400000" data-listing-file-modified-sort="1721712947000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="5" data-categories="Advocacy,bikes,DC,Public comment,walking,\#bikeDC,\#walkDC,car culture,Congress,covid-19,DC,I write letters,National Park Service,Rock Creek Park" data-listing-date-sort="1660190400000" data-listing-file-modified-sort="1721712947024" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="634">
 <div class="body">
-<a href="./posts/On_Beach.html">
 <h3 class="no-anchor listing-title">
-On Beach Drive
+<a href="./posts/On_Beach.html" class="no-external">On Beach Drive</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/On_Beach.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Advocacy'); return false;">
 Advocacy
@@ -459,14 +477,12 @@ National Park Service
 Rock Creek Park
 </div>
 </div>
-<a href="./posts/On_Beach.html">
 <div class="listing-description">
-Last month, the National Park Service proposed ending the 28-month experiment with a (nearly) car-free Upper Beach Drive in DC’s Rock Creek Park and, in order to “improve recreational opportunities, minimize impacts to…
+<a href="./posts/On_Beach.html" class="no-external">Last month, the National Park Service proposed ending the 28-month experiment with a (nearly) car-free Upper Beach Drive in DC’s Rock Creek Park and, in order to “improve…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/On_Beach.html">
+<a href="./posts/On_Beach.html" class="no-external">
 <div class="listing-date">
 Aug 11, 2022
 </div>
@@ -479,16 +495,14 @@ J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Advocacy,DC,Letters,DC,DC Council,I write letters" data-listing-date-sort="1620014400000" data-listing-file-modified-sort="1722606183489" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="6" data-categories="Advocacy,DC,Letters,DC,DC Council,I write letters" data-listing-date-sort="1620014400000" data-listing-file-modified-sort="1722606183000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="463">
 <div class="body">
-<a href="./posts/supporting-increased-density-on-u-street-nw.html">
 <h3 class="no-anchor listing-title">
-Supporting increased density on U Street NW
+<a href="./posts/supporting-increased-density-on-u-street-nw.html" class="no-external">Supporting increased density on U Street NW</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/supporting-increased-density-on-u-street-nw.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Advocacy'); return false;">
 Advocacy
@@ -509,14 +523,12 @@ DC Council
 I write letters
 </div>
 </div>
-<a href="./posts/supporting-increased-density-on-u-street-nw.html">
 <div class="listing-description">
-It’s nearly time for DC Council to vote to pass the Comprehensive Plan, so it was time to write in again and ask again for the Future Land Use Map to allow greater density on several soon-to-be-redeveloped public sites along the short but critical transit corridor where I live…. If you’d like to submit your own testimony in…
+<a href="./posts/supporting-increased-density-on-u-street-nw.html" class="no-external">It’s nearly time for DC Council to vote to pass the Comprehensive Plan, so it was time to write in again and ask again for the Future Land Use Map to allow greater density on…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/supporting-increased-density-on-u-street-nw.html">
+<a href="./posts/supporting-increased-density-on-u-street-nw.html" class="no-external">
 <div class="listing-date">
 May 3, 2021
 </div>
@@ -529,16 +541,14 @@ J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Advocacy,DC,Testimony,DC Council" data-listing-date-sort="1607032440000" data-listing-file-modified-sort="1722606151952" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="7" data-categories="Advocacy,DC,Testimony,DC Council" data-listing-date-sort="1607032440000" data-listing-file-modified-sort="1722606151000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="833">
 <div class="body">
-<a href="./posts/comp-plan.html">
 <h3 class="no-anchor listing-title">
-Testimony to DC Council on B23-736, the ‘Comprehensive Plan Amendment Act of 2020.’
+<a href="./posts/comp-plan.html" class="no-external">Testimony to DC Council on B23-736, the ‘Comprehensive Plan Amendment Act of 2020.’</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/comp-plan.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Advocacy'); return false;">
 Advocacy
@@ -553,14 +563,12 @@ Testimony
 DC Council
 </div>
 </div>
-<a href="./posts/comp-plan.html">
 <div class="listing-description">
-<em>Testimony submitted for the record on Council bill B23-736, the “Comprehensive Plan Amendment Act of 2020,” also available on the Chairman’s website at page 1,238 of this…</em>
+<a href="./posts/comp-plan.html" class="no-external"><em>Testimony submitted for the record on Council bill B23-736, the “Comprehensive Plan Amendment Act of 2020,” also available on the Chairman’s website at page 1,238 of this…</em></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/comp-plan.html">
+<a href="./posts/comp-plan.html" class="no-external">
 <div class="listing-date">
 Dec 3, 2020
 </div>
@@ -573,16 +581,14 @@ J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="DC,DDOT,web" data-listing-date-sort="1579822601000" data-listing-file-modified-sort="1722340627000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="8" data-categories="DC,DDOT,web" data-listing-date-sort="1579822601000" data-listing-file-modified-sort="1722340627567" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="523">
 <div class="body">
-<a href="./posts/a-modest-proposal.html">
 <h3 class="no-anchor listing-title">
-A (non-Swiftian) modest proposal
+<a href="./posts/a-modest-proposal.html" class="no-external">A (non-Swiftian) modest proposal</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/a-modest-proposal.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('DC'); return false;">
 DC
@@ -594,14 +600,12 @@ DDOT
 web
 </div>
 </div>
-<a href="./posts/a-modest-proposal.html">
 <div class="listing-description">
-<em>Update, March 2021: They did it!…sort of. DDOT did get a brand new shiny website this winter, but now <strong>none</strong> …</em>
+<a href="./posts/a-modest-proposal.html" class="no-external"><em>Update, March 2021: They did it!…sort of. DDOT did get a brand new shiny website this winter, but now <strong>none</strong> of the old project links work. Try searching for U Street…</em></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/a-modest-proposal.html">
+<a href="./posts/a-modest-proposal.html" class="no-external">
 <div class="listing-date">
 Jan 23, 2020
 </div>
@@ -614,16 +618,14 @@ J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Advocacy,bikes,Complete Streets Act,Congress,Eleanor Holmes Norton,House of Reps,I write letters,League of American Bicyclists,Letters,SAFE Streets Act,walking" data-listing-date-sort="1563297060000" data-listing-file-modified-sort="1722606230113" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="9" data-categories="Advocacy,bikes,Complete Streets Act,Congress,Eleanor Holmes Norton,House of Reps,I write letters,League of American Bicyclists,Letters,SAFE Streets Act,walking" data-listing-date-sort="1563297060000" data-listing-file-modified-sort="1722606230000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="796">
 <div class="body">
-<a href="./posts/america-needs-safe-complete-streets.html">
 <h3 class="no-anchor listing-title">
-America Needs SAFE, Complete Streets
+<a href="./posts/america-needs-safe-complete-streets.html" class="no-external">America Needs SAFE, Complete Streets</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/america-needs-safe-complete-streets.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Advocacy'); return false;">
 Advocacy
@@ -659,14 +661,12 @@ SAFE Streets Act
 walking
 </div>
 </div>
-<a href="./posts/america-needs-safe-complete-streets.html">
 <div class="listing-description">
-<em>These messages were sent to Del. Eleanor Holmes Norton (D-DC) based on action alerts from the League of American Bicyclists. You can send your…</em>
+<a href="./posts/america-needs-safe-complete-streets.html" class="no-external"><em>These messages were sent to Del. Eleanor Holmes Norton (D-DC) based on action alerts from the League of American Bicyclists. You can send your own messages to your…</em></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/america-needs-safe-complete-streets.html">
+<a href="./posts/america-needs-safe-complete-streets.html" class="no-external">
 <div class="listing-date">
 Jul 16, 2019
 </div>
@@ -679,29 +679,25 @@ J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="Quote" data-listing-date-sort="1483197143000" data-listing-file-modified-sort="1722338983000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="10" data-categories="Quote" data-listing-date-sort="1483197143000" data-listing-file-modified-sort="1722338983385" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
 <div class="body">
-<a href="./posts/what-cowards-we-are-thinking-ourselves-above-all-this-but-letting-it-happen.html">
 <h3 class="no-anchor listing-title">
-What cowards we are, thinking ourselves above all this, but letting it happen.
+<a href="./posts/what-cowards-we-are-thinking-ourselves-above-all-this-but-letting-it-happen.html" class="no-external">What cowards we are, thinking ourselves above all this, but letting it happen.</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/what-cowards-we-are-thinking-ourselves-above-all-this-but-letting-it-happen.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Quote'); return false;">
 Quote
 </div>
 </div>
-<a href="./posts/what-cowards-we-are-thinking-ourselves-above-all-this-but-letting-it-happen.html">
 <div class="listing-description">
-Lying is the worst of all evils. Everything else that is diabolical comes from it. And we have been lied to; public opinion is constantly deceived. &nbsp;Not a page of a…<strong></strong>
+<a href="./posts/what-cowards-we-are-thinking-ourselves-above-all-this-but-letting-it-happen.html" class="no-external">Lying is the worst of all evils. Everything else that is diabolical comes from it. And we have been lied to; public opinion is constantly deceived. &nbsp;Not a page of a…<strong></strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/what-cowards-we-are-thinking-ourselves-above-all-this-but-letting-it-happen.html">
+<a href="./posts/what-cowards-we-are-thinking-ourselves-above-all-this-but-letting-it-happen.html" class="no-external">
 <div class="listing-date">
 Dec 31, 2016
 </div>
@@ -714,16 +710,152 @@ J. I. Swiderski
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="car culture,North Side,Pittsburgh" data-listing-date-sort="1435071840000" data-listing-file-modified-sort="1722340220000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="11" data-categories="Advocacy,bike lanes,bikes,car culture,Oakland,Pitt,Pittsburgh,Susan Hicks,Vision Zero,walking" data-listing-date-sort="1456358006000" data-listing-file-modified-sort="1722687186030" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
 <div class="body">
-<a href="./posts/are-we-working-out-of-conventional-wisdom-or-are-we-trying-to-think-about-the-world-that-might-be-here-10-years-from-now.html">
 <h3 class="no-anchor listing-title">
-“Are we working out of conventional wisdom or are we trying to think about the world that might be here 10 years from now?”
+<a href="./posts/blaming-victims.html" class="no-external">Still seeking justice for Susan Hicks: Blaming victims will not create safer streets</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/blaming-victims.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Advocacy'); return false;">
+Advocacy
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('bike lanes'); return false;">
+bike lanes
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('bikes'); return false;">
+bikes
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('car culture'); return false;">
+car culture
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Oakland'); return false;">
+Oakland
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Pitt'); return false;">
+Pitt
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Pittsburgh'); return false;">
+Pittsburgh
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Susan Hicks'); return false;">
+Susan Hicks
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Vision Zero'); return false;">
+Vision Zero
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('walking'); return false;">
+walking
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/blaming-victims.html" class="no-external"><strong>Yesterday marked four months since Susan Hicks was killed riding home from work. Next month, friends and others will join to&nbsp;complete her commute.</strong></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/blaming-victims.html" class="no-external">
+<div class="listing-date">
+Feb 24, 2016
+</div>
+<div class="listing-author">
+J. I. Swiderski
+</div>
+<div class="listing-reading-time">
+1 min
 </div>
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-categories="bikes,Pittsburgh,Port Authority,transit" data-listing-date-sort="1446481098000" data-listing-file-modified-sort="1722687069273" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="259">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/even-when-theyre-right.html" class="no-external">Even when they’re right, since when do bus drivers get to enforce traffic law with 22-ton vehicles?</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/even-when-theyre-right.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('bikes'); return false;">
+bikes
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Pittsburgh'); return false;">
+Pittsburgh
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Port Authority'); return false;">
+Port Authority
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('transit'); return false;">
+transit
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/even-when-theyre-right.html" class="no-external">Bike riders&nbsp;&amp;&nbsp;pedestrians and public transit should be allies, but in Pittsburgh the Port Authority of Allegheny County (still known by an old acronym, PAT) has lost nearly…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/even-when-theyre-right.html" class="no-external">
+<div class="listing-date">
+Nov 2, 2015
+</div>
+<div class="listing-author">
+J. I. Swiderski
+</div>
+<div class="listing-reading-time">
+2 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-categories="Ann Arbor,car culture,Congress,Quote" data-listing-date-sort="1436309910000" data-listing-file-modified-sort="1722687625551" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="226">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/con-way-ceo-2011-were-supportive-of-increased-road-user-feesand-we-cant-get-any-political-backing.html" class="no-external">Con-way CEO, 2011: “We’re…supportive of increased [road] user fees…and we can’t get any political backing.”</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/con-way-ceo-2011-were-supportive-of-increased-road-user-feesand-we-cant-get-any-political-backing.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Ann Arbor'); return false;">
+Ann Arbor
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('car culture'); return false;">
+car culture
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Congress'); return false;">
+Congress
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Quote'); return false;">
+Quote
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/con-way-ceo-2011-were-supportive-of-increased-road-user-feesand-we-cant-get-any-political-backing.html" class="no-external">Interesting tidbit hidden at the end of an old AnnArbor.com interview with the CEO of Con-way Inc, published back in 2011 when the trucking &amp; logistics firm moved their…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/con-way-ceo-2011-were-supportive-of-increased-road-user-feesand-we-cant-get-any-political-backing.html" class="no-external">
+<div class="listing-date">
+Jul 7, 2015
+</div>
+<div class="listing-author">
+J. I. Swiderski
+</div>
+<div class="listing-reading-time">
+2 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="14" data-categories="car culture,North Side,Pittsburgh" data-listing-date-sort="1435071840000" data-listing-file-modified-sort="1722340220337" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="127">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/are-we-working-out-of-conventional-wisdom-or-are-we-trying-to-think-about-the-world-that-might-be-here-10-years-from-now.html" class="no-external">“Are we working out of conventional wisdom or are we trying to think about the world that might be here 10 years from now?”</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/are-we-working-out-of-conventional-wisdom-or-are-we-trying-to-think-about-the-world-that-might-be-here-10-years-from-now.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('car culture'); return false;">
 car culture
@@ -735,14 +867,12 @@ North Side
 Pittsburgh
 </div>
 </div>
-<a href="./posts/are-we-working-out-of-conventional-wisdom-or-are-we-trying-to-think-about-the-world-that-might-be-here-10-years-from-now.html">
 <div class="listing-description">
-“Community based. Pedestrian friendly. Transit oriented. Mixed in uses. High density. Sustainable. Livable.
+<a href="./posts/are-we-working-out-of-conventional-wisdom-or-are-we-trying-to-think-about-the-world-that-might-be-here-10-years-from-now.html" class="no-external">“Community based. Pedestrian friendly. Transit oriented. Mixed in uses. High density. Sustainable. Livable.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/are-we-working-out-of-conventional-wisdom-or-are-we-trying-to-think-about-the-world-that-might-be-here-10-years-from-now.html">
+<a href="./posts/are-we-working-out-of-conventional-wisdom-or-are-we-trying-to-think-about-the-world-that-might-be-here-10-years-from-now.html" class="no-external">
 <div class="listing-date">
 Jun 23, 2015
 </div>
@@ -795,18 +925,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -838,11 +957,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("http:\/\/swiderskiji\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -852,8 +1010,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -865,7 +1032,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -909,6 +1199,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -934,6 +1225,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1033,9 +1350,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       &nbsp;
     </div>
-    <div class="nav-footer-right">Made with <a href="https://quarto.org/">Quarto</a>, by J.&nbsp;Swiderski, 2024. License:&nbsp;<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC&nbsp;BY-NC-SA 4.0</a>.</div>
+    <div class="nav-footer-right">
+<p>Made with <a href="https://quarto.org/">Quarto</a>, by J.&nbsp;Swiderski, 2024. License:&nbsp;<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC&nbsp;BY-NC-SA 4.0</a>.</p>
+</div>
   </div>
 </footer>
+
 
 
 
